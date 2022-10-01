@@ -1,0 +1,21 @@
+.nav{
+    background: rgb(17, 17, 17, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    display: block;
+    padding: 20px 20px;
+    color: white;
+}
+.nav .btn{
+    padding: 5px 30px;
+    margin-right: 20px;
+}

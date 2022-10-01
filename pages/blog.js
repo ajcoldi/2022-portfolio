@@ -15,10 +15,13 @@ export default function Blog({posts}){
             //JSX for individual blog listing
             return <article key={title}>
                 <Link href={`/posts/${slug}`}>
-                    <h1>{title}</h1>
+                    <a>
+                        <h1>{title}</h1>
+                        <h3>{author}</h3>
+                        <h3>{date}</h3>
+                    </a>
                 </Link>
-                <h3>{author}</h3>
-                <h3>{date}</h3>
+
             </article>
         })}
     </main>
