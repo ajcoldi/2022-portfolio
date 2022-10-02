@@ -8,7 +8,9 @@ function ProjectTabs (props){
         
     }, [])
 
-
+    useEffect(() => {
+    console.log(props.selectedTab)
+    }, [props.selectedTab])
     let categoriesArr = []
     props.projects.map((project, i) => {
         const {slug, frontmatter} = project
@@ -19,7 +21,7 @@ function ProjectTabs (props){
     return  <div className={styles.tabContainer}>
         {
             
-            categoriesArr.map((category, i) => {
+            uniqueTabs.map((category, i) => {
                 return <div key={i} className={`
                     ${styles.tab} 
                     ${category === props.selectedTab ? styles.active : '' }`} 

@@ -1,19 +1,19 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from 'markdown-it';
-
+import styles from '../../styles/Projects.module.css'
 // The page for each post
 export default function Projects({frontmatter, content}) {
 
     const {title, author, category, date, bannerImage, tags} = frontmatter
 
-    return <main>
+    return <div className={''}>
         <img src={bannerImage}/>
         <h1>{title}</h1>
         <h2>{author} || {date}</h2>
         <h3>{category} || {tags.join()}</h3>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-    </main>
+    </div>
 }
 
 // Generating the paths for each post

@@ -1,8 +1,24 @@
 .main{
     display: flex;
+    flex-direction: column;
 }
-
+.thumbnailContainer{
+    padding: 0px 40px ;
+ }
+.thumbnailContainer a{
+    display: flex;
+    grid-gap: 20px;
+}
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ .thumbnailContainer img{
+    width: 400px;
+ }
 .tabContainer{
+
 }
 
 .tab{

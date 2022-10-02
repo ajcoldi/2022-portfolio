@@ -19,27 +19,33 @@ export default function Project({projects}){
             //extract slug and frontmatter
             const {slug, frontmatter} = project
             //extract frontmatter properties
-            const {title, author, category, date, bannerImage, tags} = frontmatter
+            const {title, description, category, date, bannerImage, tags} = frontmatter
             
             //JSX for individual blog listing
             return (
-            
-            <article key={title}>
+                    <div key={title}>
                 {
-                    category === selectedTab
-                    ?<Link href={`/projects/${slug}`}>
-                        <a>
-                            <h1>{title}</h1>
-                            <h3>{author}</h3>
-                            <h3>{date}</h3>
-                        </a>
-                    </Link>
-                    : null 
-                }
-                
 
-            </article>
-            
+                    category === selectedTab
+                        ?<article className={styles.thumbnailContainer} >
+                            <Link href={`/projects/${slug}`}>
+                                    <a >
+                                        <img src={bannerImage}/>
+                                        <div className={`${styles.textWrapper}`}>
+                                            <h1>{title}</h1>
+                                            <p className='flex-1'>{description}</p>
+                                            <h3>{date}</h3>
+                                        </div>
+                                        
+                                    </a>
+                                </Link>
+                        </article>
+
+                    : <></> 
+                
+                }
+            </div>
+       
             )
         })}
     </main>
