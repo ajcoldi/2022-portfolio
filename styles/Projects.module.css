@@ -14,17 +14,13 @@
     color: white;
 }
 
-.projectTiles{
-    display: flex;
-    flex-direction: column;
-    grid-gap: 20px;
 
-}
 .projectTxtBtnWrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-gap: 40px;
+
 }
 .btnWrapper{
     display: flex;
@@ -53,4 +49,13 @@
     width: 400px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+ }
+
+
+ .iconThumbnail{
+ }
+
+ .iconThumbnail img{
+    width: 250px;
+
  }

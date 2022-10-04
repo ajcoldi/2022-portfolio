@@ -11,10 +11,11 @@ import { useEffect, useState } from 'react'
 export default function Project({projects}){
     const [selectedTab, setSelectedTab] = useState()
 
-    return <main>
+
+    return <main >
         <h2>Projects.</h2>
         <Tabs projects={projects} setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
-        <div className={styles.projectTiles}>
+        <div className={selectedTab}>
             {projects.map(project => {
                 //extract slug and frontmatter
                 const {slug, frontmatter} = project
@@ -23,32 +24,42 @@ export default function Project({projects}){
                 
                 //JSX for individual blog listing
                 return (
-                        <div key={title}>
+                        <>
+                            
                     {
-
                         category === selectedTab
-                            ?<article className={styles.thumbnailContainer} >
+                            ?   
+                            
+                            category == 'Development'
+                                ? <article className={styles.thumbnailContainer} >
                                             <img src={bannerImage}/>
                                             <div className={`${styles.textWrapper}`}>
                                                 <h3>{title}</h3>
                                                 <p className='flex-1'>{description}</p>
                                                 <div className={styles.projectTxtBtnWrapper}>
-                                                    <div className={styles.btnWrapper}>
-                                                        <Link href={`/projects/${slug}`}>
-                                                        <a className='btn btn-primary'>View details</a>
-                                                        </Link>
-                                                        <Link href={`/projects/${slug}`}>
-                                                        <a className='btn btn-primary'>GitHub Repo</a>
-                                                        </Link>
-                                                    </div>
-                                                </div>
+                                                <div className={styles.btnWrapper}>
+                                                <Link href={`/projects/${slug}`}>
+                                                <a className='btn btn-primary'>View details</a>
+                                                </Link>
+                                                <Link href={`/projects/${slug}`}>
+                                                <a className='btn btn-primary'>GitHub Repo</a>
+                                                </Link>
                                             </div>
-                            </article>
-
-                        : <></> 
+                                        </div>
+                                    </div>
+                                </article>
+                                : 
+                            category == 'Icons'
+                                ? <div className={styles.iconThumbnail}>
+                                    <img src={bannerImage}/>
+                                </div>
+                                : null
+                            
+                        : null 
                     
                     }
-                        </div>
+                    
+                        </>
         
                 )
             })}
