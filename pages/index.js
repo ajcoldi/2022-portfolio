@@ -14,11 +14,11 @@ export default function Home() {
 
 
           <p>
-            I'm a passionate developer with a broad skillset. 
+            I&apos;m a passionate developer with a broad skillset. 
           </p>
           <br/>
           <p>
-            My favourite tech stack is PERN however I've gained exposure to many technologies and can adapt to new technologies quickly.
+            My favourite tech stack is PERN however I&apos;ve gained exposure to many technologies and can adapt to new technologies quickly.
           </p>
           <br/>
           <p>
