@@ -22,11 +22,11 @@ export default function Home() {
           </p>
           <br/>
           <p>
-            Being artistic I’m a competent designer and have comercial expirience designing UI components with industry standard tools.
+            Being artistic I&apos;m a competent designer and have comercial expirience designing UI components with industry standard tools.
           </p>
           <br/>
           <p>
-            Recently I’ve been learning BabylonJS and have breifly used this technology in a commercial setting. 
+            Recently I&apos;ve been learning BabylonJS and have breifly used this technology in a commercial setting. 
 
           </p>
         </div>
