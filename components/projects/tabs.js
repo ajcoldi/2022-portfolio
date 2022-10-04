@@ -24,9 +24,9 @@ function ProjectTabs (props){
             uniqueTabs.map((category, i) => {
                 return <div key={i} className={`
                     ${styles.tab} 
-                    ${category === props.selectedTab ? styles.active : '' }`} 
+                   `} 
                     onClick={() => props.setSelectedTab(category)}>
-                        <p>{category}</p>
+                       <a className={category === props.selectedTab ? `${styles.active} floating `: '' }>{category}</a>
                     </div>
                 
             })

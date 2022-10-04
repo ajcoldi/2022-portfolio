@@ -11,43 +11,49 @@ import { useEffect, useState } from 'react'
 export default function Project({projects}){
     const [selectedTab, setSelectedTab] = useState()
 
-    return <main className={styles.main}>
-        
+    return <main>
+        <h2>Projects.</h2>
         <Tabs projects={projects} setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
-        
-        {projects.map(project => {
-            //extract slug and frontmatter
-            const {slug, frontmatter} = project
-            //extract frontmatter properties
-            const {title, description, category, date, bannerImage, tags} = frontmatter
-            
-            //JSX for individual blog listing
-            return (
-                    <div key={title}>
-                {
-
-                    category === selectedTab
-                        ?<article className={styles.thumbnailContainer} >
-                            <Link href={`/projects/${slug}`}>
-                                    <a >
-                                        <img src={bannerImage}/>
-                                        <div className={`${styles.textWrapper}`}>
-                                            <h1>{title}</h1>
-                                            <p className='flex-1'>{description}</p>
-                                            <h3>{date}</h3>
-                                        </div>
-                                        
-                                    </a>
-                                </Link>
-                        </article>
-
-                    : <></> 
+        <div className={styles.projectTiles}>
+            {projects.map(project => {
+                //extract slug and frontmatter
+                const {slug, frontmatter} = project
+                //extract frontmatter properties
+                const {title, description, category, date, bannerImage, tags} = frontmatter
                 
-                }
-            </div>
-       
-            )
-        })}
+                //JSX for individual blog listing
+                return (
+                        <div key={title}>
+                    {
+
+                        category === selectedTab
+                            ?<article className={styles.thumbnailContainer} >
+                                            <img src={bannerImage}/>
+                                            <div className={`${styles.textWrapper}`}>
+                                                <h3>{title}</h3>
+                                                <p className='flex-1'>{description}</p>
+                                                <div className={styles.projectTxtBtnWrapper}>
+                                                    <div className={styles.btnWrapper}>
+                                                        <Link href={`/projects/${slug}`}>
+                                                        <a className='btn btn-primary'>View details</a>
+                                                        </Link>
+                                                        <Link href={`/projects/${slug}`}>
+                                                        <a className='btn btn-primary'>GitHub Repo</a>
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            </article>
+
+                        : <></> 
+                    
+                    }
+                        </div>
+        
+                )
+            })}
+        </div>
+ 
     </main>
 }
 

@@ -1,10 +1,8 @@
-.main{
-    display: flex;
-    grid-gap: 40px;
-}
+
 .stackList{
+}
+.stackList ul{
     display: flex;
-    flex-direction: column;
 }
 .li{
     padding: 10px 10px;
@@ -16,9 +14,9 @@
     margin: 10px;
 }
 .li p{
-    width: 200px;
+    width: 100px;
+    font-size: 14px;
 }
 
 .profileDescription{
-    padding: 20px;
 }
