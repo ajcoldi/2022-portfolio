@@ -20,7 +20,7 @@ export default function Project({projects}){
                 //extract slug and frontmatter
                 const {slug, frontmatter} = project
                 //extract frontmatter properties
-                const {title, description, category, date, bannerImage, tags} = frontmatter
+                const {title, description, category, date, bannerImage, demoLink,tags} = frontmatter
                 
                 //JSX for individual blog listing
                 return (
@@ -39,6 +39,9 @@ export default function Project({projects}){
                                                 <div className={styles.projectTxtBtnWrapper}>
                                                 <div className={styles.btnWrapper}>
                                                 <Link href={`/projects/${slug}`}>
+                                                <a className='btn btn-primary'>Demo</a>
+                                                </Link>
+                                                <Link href={`/projects/${slug}`}>
                                                 <a className='btn btn-primary'>View details</a>
                                                 </Link>
                                                 <Link href={`/projects/${slug}`}>
@@ -52,6 +55,25 @@ export default function Project({projects}){
                             category == 'Icons'
                                 ? <div className={styles.iconThumbnail}>
                                     <img src={bannerImage}/>
+                                </div>
+                                :
+                            category == 'Designs'
+                                ? <div className={styles.designCard}>
+                                    <img src={bannerImage} />
+                                        <div className={`${styles.textWrapper}`}>
+                                                <h3>{title}</h3>
+                                                <p className='flex-1'>{description}</p>
+                                                <div className={styles.projectTxtBtnWrapper}>
+                                                <div className={styles.btnWrapper}>
+                                                <Link href={demoLink}>
+                                                <a className='btn btn-primary' target='_blank'>Demo</a>
+                                                </Link>
+                                                <Link href={`/projects/${slug}`}>
+                                                <a className='btn btn-primary'>GitHub Repo</a>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 : null
                             

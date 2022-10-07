@@ -57,5 +57,22 @@
 
  .iconThumbnail img{
     width: 250px;
+    border-radius: 5px;
 
  }
+ .designCard{
+    display: flex;
+    grid-gap: 20px;
+    background-color: #202020;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 5px #1b1b1b;
+    max-width: 1000px;
+    border-right: solid 4px rgb(201, 113, 41); }
+
+.designCard img{
+    width: 250px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;}
+.designCard a{
+    border: solid 2px rgb(201, 113, 41) ;
+}

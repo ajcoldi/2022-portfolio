@@ -152,3 +152,8 @@ a {
   grid-template-columns: repeat(auto-fit, 250px);
   justify-content: left;
 }
+.Designs{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+}

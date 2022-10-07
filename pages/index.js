@@ -8,11 +8,6 @@ export default function Home() {
       <main className={styles.main}>
          <div className={styles.profileDescription}>
           <h1>Welcome.</h1>   
-      
-
-
-
-
           <p>
             I&apos;m a passionate developer with a broad skillset. 
           </p>
