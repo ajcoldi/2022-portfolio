@@ -5,6 +5,8 @@ description: "A concept for a 3d viewer for product designs and displays using B
 category: "Development"
 date: "2022-03-13"
 bannerImage: "https://res.cloudinary.com/dqkwveihk/image/upload/v1664625024/ipod_cyiaat.jpg"
+repo: "https://github.com/ajcoldi/2023-pagination-frontend"
+
 tags:
     - example
 ---

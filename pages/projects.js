@@ -12,15 +12,18 @@ export default function Project({projects}){
     const [selectedTab, setSelectedTab] = useState()
 
 
-    return <main >
-        <h2>Projects.</h2>
+    return <main className={styles.main}>
+        
         <Tabs projects={projects} setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
-        <div className={selectedTab}>
+        <div className={styles.wrapper}>
+            <div className={selectedTab}>
+            
+
             {projects.map(project => {
                 //extract slug and frontmatter
                 const {slug, frontmatter} = project
                 //extract frontmatter properties
-                const {title, description, category, date, bannerImage, demoLink,tags} = frontmatter
+                const {title, description, category, date, bannerImage, demoLink,tags, repo} = frontmatter
                 
                 //JSX for individual blog listing
                 return (
@@ -37,19 +40,17 @@ export default function Project({projects}){
                                                 <h3>{title}</h3>
                                                 <p className='flex-1'>{description}</p>
                                                 <div className={styles.projectTxtBtnWrapper}>
-                                                <div className={styles.btnWrapper}>
-                                                <Link href={`/projects/${slug}`}>
-                                                <a className='btn btn-primary'>Demo</a>
-                                                </Link>
-                                                <Link href={`/projects/${slug}`}>
-                                                <a className='btn btn-primary'>View details</a>
-                                                </Link>
-                                                <Link href={`/projects/${slug}`}>
-                                                <a className='btn btn-primary'>GitHub Repo</a>
-                                                </Link>
+                                                    <div className={styles.btnWrapper}>
+                                                        <Link href={`/projects/${slug}`}>
+                                                        <a className='btn btn-primary'>Demo</a>
+                                                        </Link>
+                                                        <Link href={`/projects/${slug}`}>
+                                                        <a className='btn btn-primary'>View details</a>
+                                                        </Link>
+                                                        <a className='btn btn-primary' href={repo} target='_blank'>GitHub Repo</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
                                 </article>
                                 : 
                             category == 'Icons'
@@ -64,16 +65,16 @@ export default function Project({projects}){
                                                 <h3>{title}</h3>
                                                 <p className='flex-1'>{description}</p>
                                                 <div className={styles.projectTxtBtnWrapper}>
-                                                <div className={styles.btnWrapper}>
-                                                <Link href={demoLink}>
-                                                <a className='btn btn-primary' target='_blank'>Demo</a>
-                                                </Link>
-                                                <Link href={`/projects/${slug}`}>
-                                                <a className='btn btn-primary'>GitHub Repo</a>
-                                                </Link>
-                                            </div>
+                                                    <div className={styles.btnWrapper}>
+                                                        <Link href={demoLink}>
+                                                        <a className='btn btn-primary' target='_blank'>Demo</a>
+                                                        </Link>
+                                                        <Link href={`/projects/${slug}`}>
+                                                        <a className='btn btn-primary'>GitHub Repo</a>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                         </div>
-                                    </div>
                                 </div>
                                 : null
                             
@@ -85,6 +86,8 @@ export default function Project({projects}){
         
                 )
             })}
+            </div>
+
         </div>
  
     </main>

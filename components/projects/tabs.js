@@ -12,7 +12,7 @@ function ProjectTabs (props){
     console.log(props.selectedTab)
     }, [props.selectedTab])
     let categoriesArr = []
-    props.projects.map((project, i) => {
+    props.projects.reverse().map((project, i) => {
         const {slug, frontmatter} = project
         categoriesArr.push(frontmatter.category);
     })

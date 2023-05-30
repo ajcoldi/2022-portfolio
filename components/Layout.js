@@ -6,11 +6,9 @@ import Banner from "./Banner";
 export default function Layout({ children }) {
   return (
     <div className="page-layout">
-      <Banner /> 
-      <div className="display-flex">
+      <div>
         <Nav /> 
         {children}
-
       </div>
     </div>
   );

@@ -7,11 +7,12 @@ export default function Projects({frontmatter, content}) {
 
     const {title, author, category, date, bannerImage, tags} = frontmatter
 
-    return <div className={''}>
+    return <div className={styles.projectContainer}>
         <img src={bannerImage}/>
         <h1>{title}</h1>
-        <h2>{author} || {date}</h2>
-        <h3>{category} || {tags.join()}</h3>
+        {/* <h2>{author} || {date}</h2> */}
+        {/* <h3>{category} || {tags.join()}</h3> */}
+
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
     </div>
 }

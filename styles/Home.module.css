@@ -1,8 +1,29 @@
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 60px;
+}
+.row1 hr{
+    width: 20px;
+    margin: 20px 0px;
+}
+
+.logo{
+
+}
+
+.profileDescription{
+    max-width: 600px;
+}
 
 .stackList{
+  
 }
 .stackList ul{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 .li{
     padding: 10px 10px;
@@ -18,5 +39,9 @@
     font-size: 14px;
 }
 
-.profileDescription{
+
+
+.rowSpacer{
+    border: solid 1px #00A78D;
+    margin: 30px 0px;
 }
