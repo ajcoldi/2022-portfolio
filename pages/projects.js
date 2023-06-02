@@ -1,11 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Image from 'next/image';
 import Link from 'next/link';
 import Tabs from '../components/projects/tabs'
 import styles from '../styles/Projects.module.css'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import Image from 'next/image';
 
 // The Blog Page Content
 export default function Project({projects}){
@@ -35,7 +35,7 @@ export default function Project({projects}){
                             
                             category == 'Development'
                                 ? <article className={styles.thumbnailContainer} >
-                                            <img src={bannerImage}/>
+                                            <Image src={bannerImage} alt='project-thumbnail'/>
                                             <div className={`${styles.textWrapper}`}>
                                                 <h3>{title}</h3>
                                                 <p className='flex-1'>{description}</p>
@@ -47,7 +47,7 @@ export default function Project({projects}){
                                                         <Link href={`/projects/${slug}`}>
                                                         <a className='btn btn-primary'>View details</a>
                                                         </Link>
-                                                        <a className='btn btn-primary' href={repo} target='_blank'>GitHub Repo</a>
+                                                        <a className='btn btn-primary' href={repo} target='_blank' rel="noreferrer">GitHub Repo</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -55,19 +55,19 @@ export default function Project({projects}){
                                 : 
                             category == 'Icons'
                                 ? <div className={styles.iconThumbnail}>
-                                    <img src={bannerImage}/>
+                                    <Image src={bannerImage} alt='project-thumbnail'/>
                                 </div>
                                 :
                             category == 'Designs'
                                 ? <div className={styles.designCard}>
-                                    <img src={bannerImage} />
+                                    <Image src={bannerImage} alt='project-thumbnail'/>
                                         <div className={`${styles.textWrapper}`}>
                                                 <h3>{title}</h3>
                                                 <p className='flex-1'>{description}</p>
                                                 <div className={styles.projectTxtBtnWrapper}>
                                                     <div className={styles.btnWrapper}>
                                                         <Link href={demoLink}>
-                                                        <a className='btn btn-primary' target='_blank'>Demo</a>
+                                                        <a className='btn btn-primary' target='_blank'  rel="noreferrer">Demo</a>
                                                         </Link>
                                                         <Link href={`/projects/${slug}`}>
                                                         <a className='btn btn-primary'>GitHub Repo</a>

@@ -1,7 +1,5 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Header from '../components/Header'
 
 export default function Home() {
   return (
@@ -9,7 +7,7 @@ export default function Home() {
 
         <div className={styles.row1}>
           <div className={styles.logo}>
-            <Image src='/project_images/logo.png' height={"206px"} width={"352px"}/>
+            <Image priority={true} alt='logo-image'  src='/project_images/logo.png' height={"206px"} width={"352px"}/>
           </div>
 
           <div className={styles.profileDescription}>
@@ -35,7 +33,7 @@ export default function Home() {
               <br/>
               <p>What sets me apart is my unwavering dedication to learning and improvement. Programming is not just a profession but a lifelong pursuit for me. I spend my spare time coding, constantly exploring peripheral areas to gain a comprehensive understanding of the complete picture.</p>
               <br/>
-              <p>Currently, my focus lies in API design and implementation, as I'm eager to delve into the world of SAAS (Software as a Service). My problem-solving process starts with pen and paper, mapping out the flow and structure before building a rough version to address any potential issues.</p>
+              <p>Currently, my focus lies in API design and implementation, as I&apos;m eager to delve into the world of SAAS (Software as a Service). My problem-solving process starts with pen and paper, mapping out the flow and structure before building a rough version to address any potential issues.</p>
               <br/>
               <p>While I thoroughly enjoy collaborating and contributing to group projects, I am also highly adept at working independently, efficiently managing my own workload. Continuous growth and expertise development in web development technologies are my aspirations, driven by the fascinating and ever-changing landscape of the field.</p>
             </div>
@@ -45,43 +43,44 @@ export default function Home() {
           <div className={styles.stackList}>
             <ul>
               <li className={styles.li}>
-                <Image src='/stack_icons/react.svg' height={"40px"} width={"40px"}/>
+                
+                <Image alt='icon-thumbnail' src='/project_images/react.svg' height={"40px"} width={"40px"}/>
                 <p>React</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/nextjs-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/nextjs-icon.svg' height={"40px"} width={"40px"}/>
                 <p>Nextjs</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/postgresql.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/postgresql.svg' height={"40px"} width={"40px"}/>
                 <p>Postgresql</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/mongodb-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/mongodb-icon.svg' height={"40px"} width={"40px"}/>
                 <p>MongoDB</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/nodejs-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/nodejs-icon.svg' height={"40px"} width={"40px"}/>
                 <p>Nodejs</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/react.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/react.svg' height={"40px"} width={"40px"}/>
                 <p>React</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/nextjs-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/nextjs-icon.svg' height={"40px"} width={"40px"}/>
                 <p>Nextjs</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/postgresql.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/postgresql.svg' height={"40px"} width={"40px"}/>
                 <p>Postgresql</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/mongodb-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/mongodb-icon.svg' height={"40px"} width={"40px"}/>
                 <p>MongoDB</p>
               </li>
               <li className={styles.li}>
-                <Image src='/stack_icons/nodejs-icon.svg' height={"40px"} width={"40px"}/>
+                <Image alt='icon-thumbnail' src='/project_images/nodejs-icon.svg' height={"40px"} width={"40px"}/>
                 <p>Nodejs</p>
               </li>
           

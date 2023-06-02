@@ -2,13 +2,14 @@ import fs from "fs";
 import matter from "gray-matter";
 import md from 'markdown-it';
 import styles from '../../styles/Projects.module.css'
+import Image from "next/image";
 // The page for each post
 export default function Projects({frontmatter, content}) {
 
     const {title, author, category, date, bannerImage, tags} = frontmatter
 
     return <div className={styles.projectContainer}>
-        <img src={bannerImage}/>
+        <Image alt="banner-image" src={bannerImage}/>
         <h1>{title}</h1>
         {/* <h2>{author} || {date}</h2> */}
         {/* <h3>{category} || {tags.join()}</h3> */}

@@ -1,40 +1,33 @@
-import { useEffect, useState } from 'react'
-import styles from '../../styles/Projects.module.css'
-function ProjectTabs (props){
+import { useEffect } from 'react';
+import styles from '../../styles/Projects.module.css';
 
+function ProjectTabs(props) {
+  const { setSelectedTab, projects, selectedTab } = props;
 
-    useEffect(() => {
-        props.setSelectedTab(props.projects[0].frontmatter.category)
-        
-    }, [])
+  useEffect(() => {
+    setSelectedTab(projects[0].frontmatter.category);
+  }, [setSelectedTab, projects]);
 
-    useEffect(() => {
-    console.log(props.selectedTab)
-    }, [props.selectedTab])
-    let categoriesArr = []
-    props.projects.reverse().map((project, i) => {
-        const {slug, frontmatter} = project
-        categoriesArr.push(frontmatter.category);
-    })
-    const uniqueTabs = Array.from(new Set(categoriesArr));
+  useEffect(() => {
+    console.log(selectedTab);
+  }, [selectedTab]);
 
-    return  <div className={styles.tabContainer}>
-        {
-            
-            uniqueTabs.map((category, i) => {
-                return <div key={i} className={`
-                    ${styles.tab} 
-                   `} 
-                    onClick={() => props.setSelectedTab(category)}>
-                       <a className={category === props.selectedTab ? `${styles.active} floating `: '' }>{category}</a>
-                    </div>
-                
-            })
-            
-        }
+  const categoriesArr = projects.map((project) => project.frontmatter.category);
+  const uniqueTabs = Array.from(new Set(categoriesArr));
+
+  return (
+    <div className={styles.tabContainer}>
+      {uniqueTabs.map((category, i) => (
+        <div
+          key={i}
+          className={`${styles.tab} ${category === selectedTab ? `${styles.active} floating` : ''}`}
+          onClick={() => setSelectedTab(category)}
+        >
+          <a>{category}</a>
+        </div>
+      ))}
     </div>
-    
-    
+  );
 }
 
-export default ProjectTabs
+export default ProjectTabs;
