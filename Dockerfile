@@ -3,7 +3,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN  npm install --production
+RUN npm install --production
 
 FROM node:18-alpine AS builder
 WORKDIR /app
@@ -11,6 +11,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
+
+# Copy all images from public/project_images
+COPY public/project_images /app/public/project_images
 
 RUN npm run build
 

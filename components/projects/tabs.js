@@ -9,7 +9,7 @@ function ProjectTabs(props) {
   }, [setSelectedTab, projects]);
 
   useEffect(() => {
-    console.log(selectedTab);
+    console.log(projects);
   }, [selectedTab]);
 
   const categoriesArr = projects.map((project) => project.frontmatter.category);

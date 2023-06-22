@@ -9,7 +9,7 @@ export default function Projects({frontmatter, content}) {
     const {title, author, category, date, bannerImage, tags} = frontmatter
 
     return <div className={styles.projectContainer}>
-        <Image alt="banner-image" src={bannerImage}/>
+        <img className={styles.bannerimage} alt="banner-image" src={bannerImage}/>
         <h1>{title}</h1>
         {/* <h2>{author} || {date}</h2> */}
         {/* <h3>{category} || {tags.join()}</h3> */}

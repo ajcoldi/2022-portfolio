@@ -1,18 +1,24 @@
 ---
-title: "Nodejs Pagination/sorting"
+title: "Nodejs login system"
 author: "Alex Coldicott"
-description: "An API for sorting, filtering, searching and pagination with mock data"
+description: "A full stack login system using JWT and cookies to remember and authenticate users"
 category: "Development"
 date: "2022-03-13"
-bannerImage: ""
-repo: "https://github.com/ajcoldi/2023-pagination-frontend"
+bannerImage: "https://res.cloudinary.com/dqkwveihk/image/upload/v1686745637/login_system_g80bc9.png"
+repo: "https://github.com/ajcoldi/2023-login-system-backend"
+demoLink: "http://login-system.alexc-portfolio.co.uk/"
+
 tags:
     - example
 ---
 
-## This is an example blog post
+## This is an example login system
 
-This is sample content. The section above is called Frontmatter where we can add post metadata like title and author. You can add as little or as many properties in the frontmatter using YML syntax.
+This demo showcases a user authentication API built with a Next.js frontend, Node.js backend, and PostgreSQL as the database system. The project has been dockerized and deployed using an MVC architecture on an NGINX server.
+
+To improve readability, email confirmation and verification logic has been omitted from this simplified version of the project.
+
+Below, you'll find illustrations explaining the underlying logic and comprehensive documentation for the APIs.
 
 ---
 

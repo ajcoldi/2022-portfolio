@@ -31,7 +31,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px; 
-    border: solid 2px rgb(0, 26, 255);
 
 }
 
@@ -47,7 +46,6 @@
 }
 
 .thumbnailContainer{
- 
 }
 .thumbnailContainer h3{
     font-size: 18px;
@@ -80,6 +78,7 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    grid-gap: 10px;
 }
 .designCard h3{
     font-size: 18px;
@@ -93,7 +92,12 @@
 .designCard a{
 }
 
-
+.projectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .projectContainer hr{
     margin-top: 30px ;
 }
@@ -106,6 +110,10 @@
     font-size: 32px;
 }
 .projectContainer h3{
+}
+.projectContainer .bannerimage{
+    width: 50vw;
+    ;
 }
 .projectContainer div{
     padding: 30px;
@@ -120,9 +128,10 @@
         font-weight: 500;
 
     }
-.projectContainer div ul li{
 
-    list-style:circle;
+.projectContainer div ul li{
+    padding: 10px;
+   list-style:circle;
     margin-left: 60px;
     }
 
@@ -170,3 +179,35 @@
   .projectContainer  pre code {
     display: block;
   }
+
+
+  @media only screen and (max-width: 868px) {
+    /* CSS styles specific to mobile devices */
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        grid-gap: 40px;
+        margin-top: 40px;
+
+    }
+    
+    .tabContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: fit-content;
+        border-bottom: solid 2px #024E42;
+        border-right: none;
+
+    }
+
+    .tab{
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .tab p{
+    }
+  }
+  

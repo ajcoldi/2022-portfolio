@@ -4,15 +4,21 @@ author: "Alex Coldicott"
 description: "An API for sorting, filtering, searching and pagination with mock data"
 category: "Development"
 date: "2022-03-13"
-bannerImage: "/project_images/pagination.png"
-repo: "https://github.com/ajcoldi/2023-pagination-frontend"
+bannerImage: "https://res.cloudinary.com/dqkwveihk/image/upload/v1686745531/pagination_i6jtpd.png"
+repo: "https://github.com/ajcoldi/2023-pagination-backend"
+demoLink: "http://pagination.alexc-portfolio.co.uk/"
+
 tags:
     - example
 ---
 
-## This is an example blog post
+## This is an pagination api demo
 
-This is sample content. The section above is called Frontmatter where we can add post metadata like title and author. You can add as little or as many properties in the frontmatter using YML syntax.
+This demo highlights my proficiency in handling query strings in Node.js. I have developed an API that enables sorting, searching and filtering through mock data, and includes pagination functionality.
+
+The documentation provided below offers a comprehensive guide on utilizing the API effectively.
+
+The project itself is built with a Next.js frontend and a Node.js backend. It has been containerized using Docker and is currently hosted on an NGINX web server.
 
 ---
 
